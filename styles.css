@@ -218,4 +218,40 @@ button:hover {
     }    
 }    
 
-/* Estilo do parágrafo com balão de fala */
+.container2 {
+    display: flex;
+    justify-content: space-between; /* Coloca as imagens na esquerda, centro e direita */
+    align-items: center; /* Alinha verticalmente as imagens */
+    gap: 20px; /* Espaço entre as imagens */
+    padding: 20px;
+}
+
+.familia, .balao, .chat {
+    width: 200px; /* Ajusta o tamanho das imagens */
+    height: auto;
+}
+
+.balao{
+    width: 30%;
+    max-width: 600px;
+}
+
+.chat{
+    width: 20%;
+    max-width: 400px;
+    
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container2 {
+        flex-direction: column; /* Empilha as imagens em telas menores */
+        align-items: center; /* Centraliza as imagens */
+        gap: 15px;
+    }
+
+    .familia, .balao, .chat {
+        width: 80%; /* Ajusta o tamanho das imagens em telas pequenas */
+        max-width: 300px;
+    }
+}
