@@ -221,66 +221,37 @@ button:hover {
     margin-right: 10px;
 }
 
-.painel {
-    
-    padding: 20px;
-    background: rgb(252, 237, 246);
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
+.container3 {
+   margin-top: 10px;
+}
+
+.subtitulo {
+    color: red;
+}
+
+.cards {
   
-}
-
-
-/* Container para rolagem */
-.vantagem-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 10px;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-    cursor: grab;
-}
-
-/* Esconde a barra de rolagem */
-.vantagem-container::-webkit-scrollbar {
-    display: none;
-}
-
-/* Estilos dos cartões */
-.vantagem {
-    min-width: 200px;
-    height: 250px;
-    background: #eee;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.vantagem span {
-    font-size: 40px;
+.cards:hover {
+    transform: scale(1.05);
+}
+
+.cards img {
+    width: 100%;
+    border-radius: 10px;
     display: block;
-    margin-bottom: 10px;
 }
 
-h3 {
-    margin: 5px 0;
-    font-size: 18px;
+.cards p {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
 }
-
-p {
-    font-size: 14px;
-    color: #555;
-}
-
-/* Efeito de destaque */
-.vantagem:hover {
-    transform: scale(1.1);
-}
-
-
-
