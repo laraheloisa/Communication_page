@@ -56,7 +56,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: auto;
     padding: 20px;
     min-height: 100vh; /* Garante que a página possa rolar */
@@ -80,14 +80,12 @@ img {
 
 .menu {
     position: absolute;
-    top: 10px; /* Ajuste conforme necessário */
-    left: 20px; /* Ajuste conforme necessário */
     z-index: 2;
     margin-right: 50px;
     margin-top: 50px;
     list-style: none;
     display: flex;
-    gap: 50px; /* Aumenta o espaçamento entre os itens */
+    gap: 50px; 
     position: relative;
     z-index: 2;
 }
@@ -99,57 +97,32 @@ img {
 .menu a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 18px; /* Aumenta o tamanho da fonte */
+    font-size: 18px; 
     font-weight: 600;
-    font-family: 'Montserrat', sans-serif; /* Fonte estilizada */
-    font-style: italic; /* Deixa o texto em itálico */
+    font-family: 'Montserrat', sans-serif; 
+    font-style: italic;
     display: flex;
     align-items: center;
-    gap: 15px; /* Espaço entre o texto e a seta */
+    gap: 15px; 
+    margin-bottom: 20px;
 }
 
-/* Estiliza a seta */
+
 .arrow {
-    font-size: 14px; /* Tamanho da seta */
-    color: white; /* Deixa a seta branca */
+    font-size: 14px; 
+    color: white; 
     transition: transform 0.3s ease;
 }    
 
-/* Efeito ao passar o mouse */
 .menu li:hover .arrow {
-    transform: rotate(180deg); /* Gira a seta para cima */
+    transform: rotate(180deg); 
 }   
-
-p {
-    position: relative; /* Necessário para posicionar o triângulo */
-    background-color: #f7f7f7; /* Cor de fundo do balão */
-    padding: 20px; /* Espaço interno */
-    border-radius: 15px; /* Bordas arredondadas */
-    font-size: 18px; /* Tamanho da fonte */
-    font-family: 'Poppins', sans-serif; /* Fonte do texto */
-    color: #333; /* Cor do texto */
-    max-width: 400px; /* Largura máxima do balão */
-    margin: 30px; /* Margem em torno do balão */
-    text-align: center; /* Centraliza o texto */
-}
-
-/* Triângulo do balão de fala */
-p::after {
-    content: '';
-    position: absolute;
-    bottom: -20px; /* Ajusta a posição do triângulo */
-    left: 50%; /* Centraliza o triângulo em relação ao parágrafo */
-    transform: translateX(-50%); /* Centraliza o triângulo */
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 20px solid #f7f7f7; /* Cor do triângulo */
-}
 
 
 h1 {
     margin-left: 30px;
     color: darkred;
-    font-size: 38px;
+    font-size: 40px;
 }    
 
 h2 {
@@ -161,12 +134,16 @@ h2 {
 h2 strong {
     color: red;
     font-weight: bold;
-}    
+}   
+
+.atla {
+   margin-top: 50px;
+}   
 
 button {
-    background-color: red; /* Vermelho vibrante */
-    color: white; /* Texto branco */
-    border: none; /* Sem borda */
+    background-color: red; 
+    color: white; 
+    border: none; 
     padding: 12px 20px;
     font-size: 16px;
     font-weight: bold;
@@ -174,24 +151,22 @@ button {
     cursor: pointer;
     transition: 0.3s;
     margin: 30px;
-    
-    /* Bordas arredondadas */
     width: 150px;
     height: 50px;
-    border-radius: 25px; /* Bordas suavemente arredondadas */
+    border-radius: 25px; 
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Efeito de brilho */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
 }    
 
-/* Animação de luzes */
+
 button::before {
     content: "";
     position: absolute;
-    width: 140%;
-    height: 140%;
+    width: 130%;
+    height: 130%;
     top: -20%;
     left: -20%;
     background: radial-gradient(circle, rgba(241, 134, 184, 0.6) 0%, rgba(255, 0, 0, 0) 80%);
@@ -201,13 +176,13 @@ button::before {
     
 }    
 
-/* Efeito ao passar o mouse */
+
 button:hover {
     background-color: darkred;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
 }    
 
-/* Animação do efeito de luz */
+
 @keyframes glow {
     0% {
         transform: scale(1);
@@ -246,11 +221,66 @@ button:hover {
     margin-right: 10px;
 }
 
-.familia2 {
-    width: 50%;
-    min-width: 400px;
-    margin-left: 40px;
+.painel {
+    
+    padding: 20px;
+    background: rgb(252, 237, 246);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
   
 }
+
+
+/* Container para rolagem */
+.vantagem-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    cursor: grab;
+}
+
+/* Esconde a barra de rolagem */
+.vantagem-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Estilos dos cartões */
+.vantagem {
+    min-width: 200px;
+    height: 250px;
+    background: #eee;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.vantagem span {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Efeito de destaque */
+.vantagem:hover {
+    transform: scale(1.1);
+}
+
 
 
