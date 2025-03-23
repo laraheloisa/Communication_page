@@ -8,7 +8,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: url(imagens/fundo.png) no-repeat right;
-    background-size: 150%;
+    background-size: 130%;
 }
 
 .wave-container {
@@ -16,13 +16,13 @@ body {
     top: 0; 
     left: 0;
     width: 100%; 
-    z-index: -1;
     pointer-events: none; 
 }
 
 .wave {
     width: 100%; 
     height: auto; 
+    position: fixed;
 }
 
 
@@ -38,10 +38,11 @@ body {
     left: 0;
     z-index: 1000;
     padding: 0 20px;
+    position: fixed;
 }
 
 .logo img {
-    position: absolute;
+    position: fixed;
     top: 10px; /* Ajuste conforme necessário */
     left: 20px; /* Ajuste conforme necessário */
     z-index: 2;
@@ -148,7 +149,7 @@ p::after {
 h1 {
     margin-left: 30px;
     color: darkred;
-    font-size: 36px;
+    font-size: 38px;
 }    
 
 h2 {
@@ -220,38 +221,36 @@ button:hover {
 
 .container2 {
     display: flex;
-    justify-content: space-between; /* Coloca as imagens na esquerda, centro e direita */
-    align-items: center; /* Alinha verticalmente as imagens */
-    gap: 20px; /* Espaço entre as imagens */
-    padding: 20px;
+    justify-content: flex-end; /* Alinha as divs à direita */
+    align-items: center; /* Centraliza verticalmente */
 }
 
-.familia, .balao, .chat {
-    width: 200px; /* Ajusta o tamanho das imagens */
-    height: auto;
+.chat-container {
+    position: absolute; /* Mantém o chat como referência */
 }
 
-.balao{
-    width: 30%;
-    max-width: 600px;
+.balao-container {
+    position: relative; /* Permite sobreposição */
+    bottom: -80px; /* Move o balão para cima, deixando só a pontinha sobre o chat */
+    margin-right: 380px;
 }
 
-.chat{
-    width: 20%;
-    max-width: 400px;
-    
+.balao {
+    width: 60%;
+    min-width: 500px;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .container2 {
-        flex-direction: column; /* Empilha as imagens em telas menores */
-        align-items: center; /* Centraliza as imagens */
-        gap: 15px;
-    }
-
-    .familia, .balao, .chat {
-        width: 80%; /* Ajusta o tamanho das imagens em telas pequenas */
-        max-width: 300px;
-    }
+.chat {
+    width: 50%;
+    min-width: 400px;
+    margin-right: 10px;
 }
+
+.familia2 {
+    width: 50%;
+    min-width: 400px;
+    margin-left: 40px;
+  
+}
+
+
