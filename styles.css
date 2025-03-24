@@ -8,7 +8,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: url(imagens/fundo.png) no-repeat right;
-    background-size: 130%;
+    background-size: 110%;
 }
 
 .wave-container {
@@ -141,6 +141,9 @@ h2 strong {
 }   
 
 button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: red; 
     color: white; 
     border: none; 
@@ -150,38 +153,41 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s;
-    margin: 30px;
     width: 150px;
     height: 50px;
     border-radius: 25px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
-}    
+    margin: 20px;
+  }
 
-
-button::before {
+  button::before {
     content: "";
+    width: 10%;
+    height: 10%;
     position: absolute;
-    width: 130%;
-    height: 130%;
     top: -20%;
     left: -20%;
     background: radial-gradient(circle, rgba(241, 134, 184, 0.6) 0%, rgba(255, 0, 0, 0) 80%);
     border-radius: 50%;
     z-index: -1;
     animation: glow 1.5s infinite alternate ease-in-out;
-    
-}    
+  }
 
-
-button:hover {
+  button:hover {
     background-color: darkred;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
-}    
+  }
 
+  @keyframes glow {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+  }
 
 @keyframes glow {
     0% {
@@ -221,22 +227,29 @@ button:hover {
     margin-right: 10px;
 }
 
-.container3 {
-   margin-top: 10px;
-}
 
 .subtitulo {
     color: red;
+    margin-top: 100px;
 }
 
+
+.painel-container {
+    overflow-x: scroll; /* Mantém a rolagem horizontal */
+    scrollbar-width: none; /* Esconde a barra no Firefox */
+}
+  
+.painel-container::-webkit-scrollbar {
+    display: none; /* Esconde a barra no Chrome e Safari */
+}
+  
 .painel {
     display: flex;
     gap: 20px; /* Espaço entre os cards */
-    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
-    justify-content: center;
-    padding: 20px;
-
-    
+    flex-wrap: nowrap; /* Mantém todos os cards em uma linha */
+    justify-content: flex-start;
+    width: max-content; /* Mantém os cards em linha reta */
+   
 }
 
 .cards {
@@ -246,6 +259,7 @@ button:hover {
     text-align: center;
     max-width: 300px;
     transition: transform 0.3s ease-in-out;
+    flex: 0 0 auto; /* Mantém o tamanho fixo dos cards */
 }
 
 .cards:hover {
