@@ -212,7 +212,7 @@ button:hover {
 
 .balao {
     width: 60%;
-    min-width: 500px;
+    min-width: 550px;
 }
 
 .chat {
@@ -229,8 +229,17 @@ button:hover {
     color: red;
 }
 
+.painel {
+    display: flex;
+    gap: 20px; /* Espaço entre os cards */
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    justify-content: center;
+    padding: 20px;
+
+    
+}
+
 .cards {
-  
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
