@@ -8,7 +8,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: url(imagens/fundo.png) no-repeat right;
-    background-size: 130%;
+    background-size: 150%;
 }
 
 .wave-container {
@@ -17,12 +17,14 @@ body {
     left: 0;
     width: 100%; 
     pointer-events: none; 
+    z-index: 2;
 }
 
 .wave {
+    position: fixed;
     width: 100%; 
     height: auto; 
-    position: fixed;
+
 }
 
 
@@ -39,6 +41,7 @@ body {
     z-index: 1000;
     padding: 0 20px;
     position: fixed;
+    z-index: 1000;
 }
 
 .logo img {
@@ -141,6 +144,9 @@ h2 strong {
 }   
 
 button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: red; 
     color: white; 
     border: none; 
@@ -150,38 +156,41 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s;
-    margin: 30px;
     width: 150px;
     height: 50px;
     border-radius: 25px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
-}    
+    margin: 20px;
+  }
 
-
-button::before {
+  button::before {
     content: "";
+    width: 10%;
+    height: 10%;
     position: absolute;
-    width: 130%;
-    height: 130%;
     top: -20%;
     left: -20%;
     background: radial-gradient(circle, rgba(241, 134, 184, 0.6) 0%, rgba(255, 0, 0, 0) 80%);
     border-radius: 50%;
     z-index: -1;
     animation: glow 1.5s infinite alternate ease-in-out;
-    
-}    
+  }
 
-
-button:hover {
+  button:hover {
     background-color: darkred;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
-}    
+  }
 
+  @keyframes glow {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+  }
 
 @keyframes glow {
     0% {
@@ -221,22 +230,44 @@ button:hover {
     margin-right: 10px;
 }
 
-.container3 {
-   margin-top: 10px;
-}
 
 .subtitulo {
     color: red;
+    margin-top: 150px;
 }
 
+.destaque {
+    color: #e60000; /* Vermelho mais vivo */
+    font-style: italic; /* Texto em itálico */
+    font-weight: bold; /* Negrito para mais destaque */
+    font-family: 'Arial', sans-serif; /* Você pode trocar por outra fonte se desejar */
+}
+
+
+.painel-container {
+    overflow-x: scroll; /* Mantém a rolagem horizontal */
+    scrollbar-width: none; /* Esconde a barra no Firefox */
+}
+  
+.painel-container::-webkit-scrollbar {
+    display: none; /* Esconde a barra no Chrome e Safari */
+}
+  
 .painel {
     display: flex;
     gap: 20px; /* Espaço entre os cards */
+<<<<<<< HEAD
     flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
     justify-content: center;
     padding: 20px;
 
      
+=======
+    flex-wrap: nowrap; /* Mantém todos os cards em uma linha */
+    justify-content: flex-start;
+    width: max-content; /* Mantém os cards em linha reta */
+    z-index: 1;
+>>>>>>> b429c9671afa1748792cc8252f58d52fc5e0ea19
 }
 
 .cards {
@@ -246,6 +277,9 @@ button:hover {
     text-align: center;
     max-width: 300px;
     transition: transform 0.3s ease-in-out;
+    flex: 0 0 auto; /* Mantém o tamanho fixo dos cards */
+    z-index: 1; /* Mantém os cards atrás da wave */
+   
 }
 
 .cards:hover {
@@ -263,4 +297,99 @@ button:hover {
     font-size: 16px;
     color: #333;
     font-weight: bold;
+}
+
+.container5{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+
+}
+
+
+.meio-circulo {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    border-top-left-radius: 400px;
+    z-index: 2;
+   
+}
+   
+
+.wave-footer-container {
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Posiciona a onda na parte inferior */
+    width: 100%;
+  
+}
+
+.wave-footer {
+    width: 100%;
+    height: auto;
+}
+
+.rodapé {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Mantém o footer sempre no topo */
+    padding: 0 20px;
+    color: aliceblue;
+}
+
+
+
+.container4{
+    display: flex;
+   justify-content: center;
+    padding: 20px;
+}
+
+.comunicacao-segura {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin-top: 100px;
+
+    
+    
+    /* Ajustes para alinhar à direita */
+   
+    right: 20px; /* Ajuste conforme necessário */
+    top: 100px; /* Mantém a margem do topo */
+}
+
+.icone-seguranca {
+    font-size: 40px;
+    color: #00ff08; 
+}
+
+.imagem{
+    margin-top: 100px;
+    
+}
+
+h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
 }
