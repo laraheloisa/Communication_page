@@ -415,4 +415,29 @@ p {
 }
 
 
-  
+
+.social-icons {
+    position: fixed;  /* Fixa a posição dos ícones */
+    left: 10px;       /* Coloca a 10px da borda esquerda */
+    top: 50%;         /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta a centralização */
+    display: flex;
+    flex-direction: column; /* Empilha os ícones verticalmente */
+    gap: 10px; /* Espaço entre os ícones */
+    margin-top: 300px;
+    z-index: 1;
+}
+
+.social-icons a img {
+    width: 40px; /* Define o tamanho dos ícones */
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}
+
+.instagram {
+    filter: grayscale(100%) brightness(0);
+}
