@@ -7,9 +7,11 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: url(imagens/fundo.png) no-repeat right;
-    background-size: 150%;
+    background: url(imagens/fundo.png) no-repeat center center;
+    background-size: 235% ; /* A imagem cobre toda a tela */
+    height: 100vh; /* Garantir que o fundo cubra toda a altura da tela */
 }
+
 
 .wave-container {
     position: fixed; 
@@ -78,8 +80,6 @@ img {
     z-index: -1; 
     margin-right: 5%;
 }
-
-
 
 .menu {
     position: absolute;
@@ -207,6 +207,7 @@ button {
     display: flex;
     justify-content: flex-end; /* Alinha as divs à direita */
     align-items: center; /* Centraliza verticalmente */
+    margin-bottom: 50px;
 }
 
 .chat-container {
@@ -256,18 +257,14 @@ button {
 .painel {
     display: flex;
     gap: 20px; /* Espaço entre os cards */
-<<<<<<< HEAD
     flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
     justify-content: center;
     padding: 20px;
-
-     
-=======
     flex-wrap: nowrap; /* Mantém todos os cards em uma linha */
     justify-content: flex-start;
     width: max-content; /* Mantém os cards em linha reta */
     z-index: 1;
->>>>>>> b429c9671afa1748792cc8252f58d52fc5e0ea19
+
 }
 
 .cards {
@@ -305,6 +302,8 @@ button {
     align-items: center;
     position: relative;
     overflow: visible;
+    background-color: black;
+
 
 }
 
@@ -345,19 +344,21 @@ button {
     z-index: 1000; /* Mantém o footer sempre no topo */
     padding: 0 20px;
     color: aliceblue;
+    font-size: 10px;
 }
 
 
 
 .container4{
     display: flex;
-   justify-content: center;
+    justify-content: center;
     padding: 20px;
+   
 }
 
 .comunicacao-segura {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -374,22 +375,44 @@ button {
 
 .icone-seguranca {
     font-size: 40px;
-    color: #00ff08; 
+    color: #c9ccc9; 
 }
 
 .imagem{
     margin-top: 100px;
+  
     
 }
 
 h3 {
     color: #333;
     font-size: 20px;
-    margin-bottom: 10px;
+    
 }
 
 p {
     color: #555;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 18px;
+  
 }
+
+.linha {
+    background-color: aliceblue;
+    margin-left: 10px;
+    font-family: 'Montserrat', sans-serif; 
+    font-style: italic;
+   
+    
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajuste a altura conforme necessário */
+    background-color: black;
+   
+}
+
+
+  
