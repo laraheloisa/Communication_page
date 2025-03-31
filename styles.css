@@ -8,7 +8,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: url(imagens/fundo.png) no-repeat center center;
-    background-size: 235% ; /* A imagem cobre toda a tela */
+    background-size: 300% ; /* A imagem cobre toda a tela */
     height: 100vh; /* Garantir que o fundo cubra toda a altura da tela */
 }
 
@@ -64,7 +64,7 @@ body {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
-    min-height: 100vh; /* Garante que a página possa rolar */
+    min-height: 100vh; /
 }
 
 .text {
@@ -74,7 +74,7 @@ body {
 }
 
 img {
-    position: relative; /* Mantém a posição original da imagem */
+    position: relative; 
     max-width: 300px;
     height: auto;
     z-index: -1; 
@@ -192,7 +192,7 @@ button {
     }
   }
 
-@keyframes glow {
+  @keyframes glow {
     0% {
         transform: scale(1);
         opacity: 0.7;
@@ -205,24 +205,26 @@ button {
 
 .container2 {
     display: flex;
-    justify-content: flex-end; /* Alinha as divs à direita */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: flex-end; 
+    align-items: center; 
     margin-bottom: 50px;
 }
 
 .chat-container {
-    position: absolute; /* Mantém o chat como referência */
+    position: absolute; 
+    margin-right: 200px;
 }
 
 .balao-container {
-    position: relative; /* Permite sobreposição */
-    bottom: -80px; /* Move o balão para cima, deixando só a pontinha sobre o chat */
-    margin-right: 380px;
+    position: relative; 
+    bottom: -80px; 
+    margin-right: 400px;
 }
 
 .balao {
     width: 60%;
     min-width: 550px;
+    margin-right: 180px;
 }
 
 .chat {
@@ -274,8 +276,8 @@ button {
     text-align: center;
     max-width: 300px;
     transition: transform 0.3s ease-in-out;
-    flex: 0 0 auto; /* Mantém o tamanho fixo dos cards */
-    z-index: 1; /* Mantém os cards atrás da wave */
+    flex: 0 0 auto; 
+    z-index: 1; 
    
 }
 
@@ -295,59 +297,6 @@ button {
     color: #333;
     font-weight: bold;
 }
-
-.container5{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    overflow: visible;
-    background-color: black;
-
-
-}
-
-
-.meio-circulo {
-    width: 400px;
-    height: 400px;
-    background-color: red;
-    border-top-left-radius: 400px;
-    z-index: 2;
-   
-}
-   
-
-.wave-footer-container {
-    position: absolute;
-    left: 0;
-    bottom: 0; /* Posiciona a onda na parte inferior */
-    width: 100%;
-  
-}
-
-.wave-footer {
-    width: 100%;
-    height: auto;
-}
-
-.rodapé {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: red;
-    height: 20px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1000; /* Mantém o footer sempre no topo */
-    padding: 0 20px;
-    color: aliceblue;
-    font-size: 10px;
-}
-
-
 
 .container4{
     display: flex;
@@ -396,6 +345,14 @@ p {
   
 }
 
+.container5{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: black;
+}
+
+
 .linha {
     background-color: aliceblue;
     margin-left: 10px;
@@ -414,30 +371,47 @@ p {
    
 }
 
+.container6{
+    background-color: black;
+
+}
+
+.wave-footer-container {
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+    width: 100%;
+  
+}
+
+.wave-footer {
+    width: 100%;
+    height: auto;
+}
 
 
-.social-icons {
-    position: fixed;  /* Fixa a posição dos ícones */
-    left: 10px;       /* Coloca a 10px da borda esquerda */
-    top: 50%;         /* Centraliza verticalmente */
-    transform: translateY(-50%); /* Ajusta a centralização */
+.meio-circulo {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    border-top-left-radius: 400px;
+    z-index: 2;
+    
+}
+
+.rodapé {
     display: flex;
-    flex-direction: column; /* Empilha os ícones verticalmente */
-    gap: 10px; /* Espaço entre os ícones */
-    margin-top: 300px;
-    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Mantém o footer sempre no topo */
+    padding: 0 20px;
+    color: aliceblue;
+    font-size: 10px;
 }
-
-.social-icons a img {
-    width: 40px; /* Define o tamanho dos ícones */
-    height: 40px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.social-icons a img:hover {
-    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
-}
-
-.instagram {
-    filter: grayscale(100%) brightness(0);
-}
+       
