@@ -8,7 +8,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: url(imagens/fundo.png) no-repeat center center;
-    background-size: 300% ; /* A imagem cobre toda a tela */
+    background-size: 200% ; /* A imagem cobre toda a tela */
     height: 100vh; /* Garantir que o fundo cubra toda a altura da tela */
 }
 
@@ -352,7 +352,7 @@ p {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Garante que a altura ocupe toda a tela */
+    height: 500px; /* Garante que a altura ocupe toda a tela */
     background-color: black;
 }
 
@@ -376,7 +376,7 @@ p {
 .footer {
     position: relative;
     background-color: rgb(255, 255, 255);
-    height: 300px; /* Altura do footer */
+    height: 100px; /* Altura do footer */
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -395,25 +395,27 @@ p {
     height: auto;
 }
 
-/* Ícones de redes sociais na esquerda */
 .social-icons {
-
     display: flex;
+    justify-content: center;
+   
+    margin: 0;
+    padding: 0;
+    margin-right: 0px;
+  }
   
-}
-
-.social-icons img {
+  .social-icons img {
     width: 20px;
     height: 20px;
-    transition: transform 0.3s;
-    z-index: 1;
-    margin-bottom: 30px;
+    
+  }
   
-}
-
-.social-icons img:hover {
-    transform: scale(1.2);
-}
+  .atlal {
+    display: block;
+    margin: 0 auto;
+    margin-top: 0; 
+  }
+  
 
 /* Meio círculo no canto direito */
 .meio-circulo {
@@ -456,3 +458,16 @@ p {
     z-index: 2;
     
 }
+
+.contato {
+    display: flex;
+    align-items: center;     /* Alinha verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-bottom: 50px;
+  }
+
+.contato img {
+    width: 30px; /* Diminui a imagem */
+    height: auto;
+  }
+  
