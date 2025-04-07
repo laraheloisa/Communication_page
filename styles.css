@@ -350,9 +350,10 @@ p {
 
 .container5 {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 500px; /* Garante que a altura ocupe toda a tela */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh; /* Garante que a altura ocupe toda a tela */
     background-color: black;
 }
 
@@ -361,6 +362,7 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 200px;
 }
 
 
@@ -465,14 +467,57 @@ p {
     align-items: center;     /* Alinha verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
     margin-bottom: 50px;
-  }
+}
 
 .contato img {
     width: 30px; /* Diminui a imagem */
     height: auto;
 }
 
-.app{
+.app {
     z-index: 2;
+    position: absolute;
+    
+    bottom: 30px; /* empurra o elemento para cima, como se fosse uma margem inferior */
+}
+
+.info-text {
+    font-family: sans-serif;
+    color: #444;
+}
+
+.download-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Garante que fique na frente */
+    color: white;
+    height: 500px;
+}
+
+
+.download-btn:hover {
+    background-color: #e23737;
+}
+
+
+
+.store-logos {
+    display: flex;
    
+}
+
+.store-logos img {
+    width: 120px;
+    height: auto;
+    z-index: 10;
+}
+
+
+.info-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    text-align: center;
+    color: rgb(182, 182, 182);
 }
