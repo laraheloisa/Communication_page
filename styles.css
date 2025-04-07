@@ -401,7 +401,7 @@ p {
    
     margin: 0;
     padding: 0;
-    margin-right: 0px;
+    margin-right: 50px;
   }
   
   .social-icons img {
@@ -414,6 +414,7 @@ p {
     display: block;
     margin: 0 auto;
     margin-top: 0; 
+    margin-left: 20px;
   }
   
 
@@ -469,5 +470,9 @@ p {
 .contato img {
     width: 30px; /* Diminui a imagem */
     height: auto;
-  }
-  
+}
+
+.app{
+    z-index: 2;
+   
+}
